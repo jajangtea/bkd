@@ -1,6 +1,6 @@
 # bkd
 Beban Kinerja Dosen
 
-#Keterangan
+# Keterangan
 aplikasi ini digunakan untuk menyimpan data beban kinerja dosen pada kampus :
-#STT Indonesia Tanjungpinang - Kepulauan Riau
+# STT Indonesia Tanjungpinang - Kepulauan Riau
