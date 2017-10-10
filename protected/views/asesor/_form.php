@@ -34,13 +34,13 @@
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'idPT'); ?>
-		<?php echo $form->textField($model,'idPT', array('class'=>'input-block-level')); ?>
+		<?php echo $form->dropDownList($model,'idPT', CHtml::listData(Pt::model()->findAll(), 'idPT', 'namaPT'),array('prompt'=>'Pilih Perguruan Tinggi','class'=>'input-block-level','style'=>'width:50%;')); ?>
 		<?php echo $form->error($model,'idPT'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'ilmu'); ?>
-		<?php echo $form->textField($model,'ilmu', array('class'=>'input-block-level')); ?>
+		<?php echo $form->dropDownList($model,'ilmu', CHtml::listData(Keilmuan::model()->findAll(), 'idIlmu', 'namaIlmu'),array('prompt'=>'Pilih Keilmuan','class'=>'input-block-level','style'=>'width:200px;')); ?>
 		<?php echo $form->error($model,'ilmu'); ?>
 	</div>
 

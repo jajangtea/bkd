@@ -14,6 +14,12 @@
     ?>
 
     <div class="row">
+        <?php echo $form->labelEx($model, 'idDosen'); ?>
+        <?php echo $form->dropDownList($model, 'idDosen', CHtml::listData(Dosen::model()->findAll(array('order' => 'namaDosen')), 'idDosen', 'namaDosen'), array('prompt' => 'Pilih Dosen', 'class' => 'input-block-level', 'style' => 'width:50%;')); ?>
+        <?php echo $form->error($model, 'idDosen'); ?>
+    </div>
+
+    <div class="row">
         <?php echo $form->labelEx($model, 'idBidang'); ?>
         <?php echo $form->dropDownList($model, 'idBidang', CHtml::listData(BidangKinerja::model()->findAll(), 'idBidang', 'namaBidang'), array('prompt' => 'Pilih Bidang', 'class' => 'input-block-level', 'style' => 'width:200px;')); ?>
         <?php echo $form->error($model, 'idBidang'); ?>
@@ -21,7 +27,7 @@
 
     <div class="row">
         <?php echo $form->labelEx($model, 'tahun'); ?>
-        <?php echo $form->dropDownList($model, 'tahun', CHtml::listData(Ta::model()->findAll(array('order'=>'ta')), 'idTa', 'ta'), array('prompt' => 'Pilih Tahun', 'class' => 'input-block-level', 'style' => 'width:200px;')); ?>
+        <?php echo $form->dropDownList($model, 'tahun', CHtml::listData(Ta::model()->findAll(array('order' => 'ta')), 'idTa', 'ta'), array('prompt' => 'Pilih Tahun', 'class' => 'input-block-level', 'style' => 'width:200px;')); ?>
         <?php echo $form->error($model, 'tahun'); ?>
     </div>
 
